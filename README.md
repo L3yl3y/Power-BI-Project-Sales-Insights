@@ -1,1 +1,1 @@
-# Power-BI-Project-Sales-Insights
+So far in this project I have started by downloading mySQL server and mySQL Workbench. From there, I had gone out to download a large amount of sales data (online) in order to run my queries. At first I had tinkered about with rather basic SQL queries (SUM, WHERE, JOIN), and then it evolved into me wanting to connect power BI to the same SQL database - as well as some data cleaning (it was warranted due to their being negative values and inconsistent currency across product sales).
