@@ -2,3 +2,5 @@ So far in this project I have downloaded Parallels Desktop to enable Windows on 
 
 So power BI has now connected to mySQL (server: 127.0.0.1:3306 localhost) and has pulled all the records from the file tables into its power BI environment - I can now transform this data. (Note reports are nothing but the BI dashboard visualisations). I first began learning about the features of power BI - what's rather interesting to witness is this data model (relationship between different tables). It was established that there was a relationship between sales.products, sales.transactions, and sales.customers. Some might need manual relationship establishment using drag and drop. Apparently I had done a star schema (fact table vs dimension table)(new concept for myself).
 
+I will now be transforming the data (going to launch a power query editor)
+
