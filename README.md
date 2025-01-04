@@ -8,7 +8,7 @@ I will now be transforming the data (going to launch a power query editor) so I 
 
 We ran this query (SELECT count(*) FROM sales.transactions WHERE transactions.currency = 'INR\r';) to discover that 150000 tuples had managed to have this problem, whereby a new line character has managed to sneak into the database, which is a real world problem --> we will filter out all the records that has 'INR' or 'USD'. We are keeping the 'INR\r' and 'USD\r' since there are more tuples with this new line character than without. Another fun tip is instead of having to write sales.transactions you can just set the sales schema as the default scehma so you can end up writing just FROM transactions.
 
-Now to start builing the dashboard - first, create basemeasures to plot different UI elements on the dashboad (once the base measure is created, you can make a new measure). From then on it's really just customisation and optimisation.
+Now to start builing the dashboard - first, create basemeasures to plot different UI elements on the dashboad (once the base measure is created, you can make a new measure). From then on it's really just customisation and optimisation. You can also apparently do a mobile layout.
 
 Note, I can't export my Power BI since I'm still a uni student and my school email (despite being a 'work' email) somehow isn't supported --> "Your organization doesn't currently allow its users to purchase Microsoft Fabric free."
 
