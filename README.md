@@ -1,6 +1,13 @@
+The inspiration of this project was this video online that taught me the ropes - https://codebasics.io/resources/sales-insights-data-analysis-project.
+
 So far in this project I have downloaded Parallels Desktop to enable Windows on my Mac by creating a virtual machine (VM) - this enables me to run the Windows application Power BI Desktop. I then proceeded to download mySQL server and mySQL Workbench, with which I'd then found a large amount of sales data (online) in order to run some fun little queries. At first I had tinkered about with rather basic SQL queries (SUM, WHERE, JOIN), and then it evolved into me wanting to connect power BI to the same SQL database - as well as some data cleaning (it was warranted due to their being negative values and inconsistent currency across product sales).
 
 So power BI has now connected to mySQL (server: 127.0.0.1:3306 localhost) and has pulled all the records from the file tables into its power BI environment - I can now transform this data. (Note reports are nothing but the BI dashboard visualisations). I first began learning about the features of power BI - what's rather interesting to witness is this data model (relationship between different tables). It was established that there was a relationship between sales.products, sales.transactions, and sales.customers. Some might need manual relationship establishment using drag and drop. Apparently I had done a star schema (fact table vs dimension table)(new concept for myself).
 
-I will now be transforming the data (going to launch a power query editor)
+I will now be transforming the data (going to launch a power query editor) so I can perform ETL. Filters such as removing blank values (NULL), removing unreasonable values (sales_amount <= 0), and converting currency for consistency (USD into INR). Note, to achieve this currency conversion, you will have to make a new column (I added a conditional column). There was also a couple of duplicates that were needed to be removed also (the reason it is a problem is when you copy the name, you get two different results --> 'INR' and 'INR\r').
+
+We ran this query (SELECT count(*) FROM sales.transactions WHERE transactions.currency = 'INR\r';) to discover that 150000 tuples had managed to have this problem, whereby a new line character has managed to sneak into the database, which is a real world problem --> we will filter out all the records that has 'INR' or 'USD'. We are keeping the 'INR\r' and 'USD\r' since there are more tuples with this new line character than without. Another fun tip is instead of having to write sales.transactions you can just set the sales schema as the default scehma so you can end up writing just FROM transactions.
+
+Now to start builing the dashboard - first, create basemeasures to plot different UI elements on the dashboad (once the base measure is created, you can make a new measure). From them on its really just customisation.
+
 
