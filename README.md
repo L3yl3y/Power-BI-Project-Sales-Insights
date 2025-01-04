@@ -10,4 +10,6 @@ We ran this query (SELECT count(*) FROM sales.transactions WHERE transactions.cu
 
 Now to start builing the dashboard - first, create basemeasures to plot different UI elements on the dashboad (once the base measure is created, you can make a new measure). From then on it's really just customisation and optimisation.
 
+Note, I can't export my Power BI since I'm still a uni student and my school email (despite being a 'work' email) somehow isn't supported --> "Your organization doesn't currently allow its users to purchase Microsoft Fabric free."
+
 
